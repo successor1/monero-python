@@ -33,6 +33,9 @@ class JSONRPCWallet(object):
     def get_view_key(self):
         return self.raw_request('query_key', {'key_type': 'view_key'})['key']
 
+    def get_spend_key(self):
+        return self.raw_request('query_key', {'key_type': 'spend_key'})['key']
+
     def get_seed(self):
         return self.raw_request('query_key', {'key_type': 'mnemonic'})['key']
 

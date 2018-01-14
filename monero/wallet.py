@@ -27,6 +27,12 @@ class Wallet(object):
         """
         return self._backend.get_view_key()
 
+    def get_spend_key(self):
+        """
+        Returns private spend key.
+        """
+        return self._backend.get_spend_key()
+
     def get_seed(self):
         """
         Returns word seed.
