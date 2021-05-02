@@ -15,7 +15,7 @@ def url_data(url):
 
 def get_daemon():
     argsparser = argparse.ArgumentParser(description="Display daemon info")
-    argsparser.add_argument('daemon_rpc_url', nargs='?', type=url_data, default='127.0.0.1:18081',
+    argsparser.add_argument('daemon_rpc_url', nargs='?', type=url_data, default='127.0.0.1:34568',
         help="Daemon RPC URL [host[:port]]")
     argsparser.add_argument('-p', dest='proxy_url', nargs='?', type=str, default=None, help="Proxy URL")
     argsparser.add_argument('-t', dest='timeout', type=int, default=30, help="Request timeout")
