@@ -16,7 +16,7 @@ def url_data(url):
 
 def get_wallet():
     argsparser = argparse.ArgumentParser(description="Display wallet contents")
-    argsparser.add_argument('wallet_rpc_url', nargs='?', type=url_data, default='127.0.0.1:18082',
+    argsparser.add_argument('wallet_rpc_url', nargs='?', type=url_data, default='127.0.0.1:34568',
         help="Wallet RPC URL [user[:password]@]host[:port]")
     argsparser.add_argument('-v', dest='verbosity', action='count', default=0,
         help="Verbosity (repeat to increase; -v for INFO, -vv for DEBUG")
