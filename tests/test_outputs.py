@@ -17,12 +17,12 @@ from .base import JSONTestCase
 
 class OutputTestCase(JSONTestCase):
     data_subdir = "test_outputs"
-    daemon_transactions_url = "http://127.0.0.1:38081/get_transactions"
-    wallet_jsonrpc_url = "http://127.0.0.1:38083/json_rpc"
+    daemon_transactions_url = "http://127.0.0.1:34567/get_transactions"
+    wallet_jsonrpc_url = "http://127.0.0.1:34568/json_rpc"
 
     @responses.activate
     def test_multiple_outputs(self):
-        daemon = Daemon(JSONRPCDaemon(host="127.0.0.1", port=38081))
+        daemon = Daemon(JSONRPCDaemon(host="127.0.0.1", port=34568))
         responses.add(responses.POST, self.wallet_jsonrpc_url,
             json=self._read("test_multiple_outputs-wallet-00-get_accounts.json"),
             status=200)
