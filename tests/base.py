@@ -3,7 +3,7 @@ import os
 import unittest
 
 class JSONTestCase(unittest.TestCase):
-    jsonrpc_url = 'http://127.0.0.1:18088/json_rpc'
+    jsonrpc_url = 'http://127.0.0.1:34568/json_rpc'
     data_subdir = None
 
     def _read(self, *args):
