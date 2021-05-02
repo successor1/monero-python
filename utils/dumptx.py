@@ -23,7 +23,7 @@ argsparser.add_argument(
     "-d",
     dest="daemon_rpc_url",
     type=url_data,
-    default="127.0.0.1:18081",
+    default="127.0.0.1:34568",
     help="Daemon RPC URL [host[:port]]",
 )
 argsparser.add_argument(
