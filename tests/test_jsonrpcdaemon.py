@@ -14,29 +14,29 @@ from monero.transaction import Transaction
 from .base import JSONTestCase
 
 class JSONRPCDaemonTestCase(JSONTestCase):
-    jsonrpc_url = 'http://127.0.0.1:18081/json_rpc'
-    mempool_url = 'http://127.0.0.1:18081/get_transaction_pool'
-    transactions_url = 'http://127.0.0.1:18081/get_transactions'
-    sendrawtransaction_url = 'http://127.0.0.1:18081/sendrawtransaction'
-    getheight_url = 'http://127.0.0.1:18081/get_height'
-    getaltblockshashes_url = 'http://127.0.0.1:18081/get_alt_blocks_hashes'
-    iskeyimagespent_url = 'http://127.0.0.1:18081/is_key_image_spent'
-    startmining_url = 'http://127.0.0.1:18081/start_mining'
-    stopmining_url = 'http://127.0.0.1:18081/stop_mining'
-    miningstatus_url = 'http://127.0.0.1:18081/mining_status'
-    savebc_url = 'http://127.0.0.1:18081/save_bc'
-    getpeerlist_url = 'http://127.0.0.1:18081/get_peer_list'
-    setloghashrate_url = 'http://127.0.0.1:18081/set_log_hash_rate'
-    setloglevel_url = 'http://127.0.0.1:18081/set_log_level'
-    setlogcategories_url = 'http://127.0.0.1:18081/set_log_categories'
-    gettransactionpoolstats_url = 'http://127.0.0.1:18081/get_transaction_pool_stats'
-    stopdaemon_url = 'http://127.0.0.1:18081/stop_daemon'
-    getlimit_url = 'http://127.0.0.1:18081/get_limit'
-    setlimit_url = 'http://127.0.0.1:18081/set_limit'
-    outpeers_url = 'http://127.0.0.1:18081/out_peers'
-    inpeers_url = 'http://127.0.0.1:18081/in_peers'
-    getouts_url = 'http://127.0.0.1:18081/get_outs'
-    update_url = 'http://127.0.0.1:18081/update'
+    jsonrpc_url = 'http://127.0.0.1:34568/json_rpc'
+    mempool_url = 'http://127.0.0.1:34568/get_transaction_pool'
+    transactions_url = 'http://127.0.0.1:34568/get_transactions'
+    sendrawtransaction_url = 'http://127.0.0.1:34568/sendrawtransaction'
+    getheight_url = 'http://127.0.0.1:34568/get_height'
+    getaltblockshashes_url = 'http://127.0.0.1:34568/get_alt_blocks_hashes'
+    iskeyimagespent_url = 'http://127.0.0.1:34568/is_key_image_spent'
+    startmining_url = 'http://127.0.0.1:34568/start_mining'
+    stopmining_url = 'http://127.0.0.1:34568/stop_mining'
+    miningstatus_url = 'http://127.0.0.1:34568/mining_status'
+    savebc_url = 'http://127.0.0.1:34568/save_bc'
+    getpeerlist_url = 'http://127.0.0.1:34568/get_peer_list'
+    setloghashrate_url = 'http://127.0.0.1:34568/set_log_hash_rate'
+    setloglevel_url = 'http://127.0.0.1:34568/set_log_level'
+    setlogcategories_url = 'http://127.0.0.1:34568/set_log_categories'
+    gettransactionpoolstats_url = 'http://127.0.0.1:34568/get_transaction_pool_stats'
+    stopdaemon_url = 'http://127.0.0.1:34568/stop_daemon'
+    getlimit_url = 'http://127.0.0.1:34568/get_limit'
+    setlimit_url = 'http://127.0.0.1:34568/set_limit'
+    outpeers_url = 'http://127.0.0.1:34568/out_peers'
+    inpeers_url = 'http://127.0.0.1:34568/in_peers'
+    getouts_url = 'http://127.0.0.1:34568/get_outs'
+    update_url = 'http://127.0.0.1:34568/update'
     data_subdir = 'test_jsonrpcdaemon'
 
     def setUp(self):
@@ -233,7 +233,7 @@ class JSONRPCDaemonTestCase(JSONTestCase):
         daemon2 = Daemon()
 
         with self.assertRaises(ValueError):
-            daemon3 = Daemon(backend=JSONRPCDaemon(), port=18089)
+            daemon3 = Daemon(backend=JSONRPCDaemon(), port=34568)
 
     @responses.activate
     def test_busy_daemon(self):
