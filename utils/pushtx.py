@@ -18,7 +18,7 @@ def url_data(url):
     return dict(filter(operator.itemgetter(1), gs.items()))
 
 argsparser = argparse.ArgumentParser(description="Push transaction to network")
-argsparser.add_argument('daemon_rpc_url', nargs='?', type=url_data, default='127.0.0.1:18081',
+argsparser.add_argument('daemon_rpc_url', nargs='?', type=url_data, default='127.0.0.1:34568',
     help="Daemon RPC URL [host[:port]]")
 argsparser.add_argument('-v', dest='verbosity', action='count', default=0,
     help="Verbosity (repeat to increase; -v for INFO, -vv for DEBUG")
